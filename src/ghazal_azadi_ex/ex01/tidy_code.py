@@ -14,7 +14,7 @@ def guessed_num():
 
 
 def true_num():
-    """Returns 2 * random number ( between 1,6) being created by the randint function
+    """Returns 2 * random number (between 1,6)  being created by the randint function
     """
     return rand_num(1, 6) + rand_num(1, 6)
 
