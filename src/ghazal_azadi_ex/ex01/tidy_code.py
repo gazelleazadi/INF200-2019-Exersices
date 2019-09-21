@@ -1,4 +1,4 @@
-from random import randint as rand_num
+from random import randint
 
 __author__ = 'ghazalazadi'
 __email__ = 'ghaz@nmbu.no'
@@ -7,39 +7,39 @@ __email__ = 'ghaz@nmbu.no'
 def guessed_num():
     """Returns the number being guessed by the user
     """
-    inp_num = 0
-    while inp_num < 1:
-        inp_num = int(input('Your guess: '))
-    return inp_num
+    input_num = 0
+    while input_num < 1:
+        input_num = int(input('Your guess: '))
+    return input_num
 
 
 def true_num():
     """Returns 2 * random number (between 1,6)  being created by the randint function
     """
-    return rand_num(1, 6) + rand_num(1, 6)
+    return randint(1, 6) + randint(1, 6)
 
 
-def check_fun(f, g):
+def check_fun(main, guess):
     """Checks if the true number is equal to the guessed number
     """
-    return f == g
+    return main == guess
 
 
 if __name__ == '__main__':
 
-    h = False
-    i = 3
+    result = False
+    time = 3
     # The game would be finished after 3 times of wrong guessed numbers
-    j = true_num()
-    while h is False and i > 0:
-        k = guessed_num()
-        h = check_fun(j, k)
+    main = true_num()
+    while result is False and time > 0:
+        guess = guessed_num()
+        result = check_fun(main, guess)
 
-        if h is False:
+        if result is False:
             print('Wrong, try again!')
-            i -= 1
+            time -= 1
 
-    if i > 0:
-        print('You won {} points.'.format(i))
+    if time > 0:
+        print('You won {} points.'.format(time))
     else:
-        print('You lost. Correct answer: {}.'.format(j))
+        print('You lost. Correct answer: {}.'.format(main))
