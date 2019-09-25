@@ -19,10 +19,17 @@ def true_num():
     return randint(1, 6) + randint(1, 6)
 
 
+<<<<<<< Updated upstream
 def check_fun(main, guess):
     """Checks if the true number is equal to the guessed number
     """
     return main == guess
+=======
+def check_fun(clue, guess):
+    """Checks if the true number is equal to the guessed number
+    """
+    return clue == guess
+>>>>>>> Stashed changes
 
 
 if __name__ == '__main__':
@@ -30,10 +37,17 @@ if __name__ == '__main__':
     result = False
     time = 3
     # The game would be finished after 3 times of wrong guessed numbers
+<<<<<<< Updated upstream
     main = true_num()
     while result is False and time > 0:
         guess = guessed_num()
         result = check_fun(main, guess)
+=======
+    clue = true_num()
+    while result is False and time > 0:
+        guess = guessed_num()
+        result = check_fun(clue, guess)
+>>>>>>> Stashed changes
 
         if result is False:
             print('Wrong, try again!')
@@ -42,4 +56,8 @@ if __name__ == '__main__':
     if time > 0:
         print('You won {} points.'.format(time))
     else:
+<<<<<<< Updated upstream
         print('You lost. Correct answer: {}.'.format(main))
+=======
+        print('You lost. Correct answer: {}.'.format(clue))
+>>>>>>> Stashed changes
