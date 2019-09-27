@@ -18,9 +18,9 @@ def entropy(message):
     # Names are chosen based on the entropy formula.
     for i in range(len(n)):
         p.append(n[i] / number)
-        freq.append(p[i] / math.log(p[i], 2))
+        freq.append(-(p[i]) * (math.log2(p[i])))
         # The formula of entropy
-    h = - sum(freq)
+    h = sum(freq)
     return h
 
 
