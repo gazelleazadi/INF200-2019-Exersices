@@ -9,7 +9,7 @@ def bubble_sort(my_data):
         for cnt in range(dim-1):
             if my_data[cnt] > my_data[cnt+1]:
                 my_data[cnt], my_data[cnt+1] = my_data[cnt+1], my_data[cnt]
-                # Comparing elements and swap them if needed.
+            # Comparing elements and swap them if needed.
                 made_swap = True
                 swaps = swaps + 1
     return my_data
