@@ -1,7 +1,7 @@
 import pytest
 
 __author__ = 'Ghazal_Azadi'
-__email__ = '@ghazal.azadinmbu.no'
+__email__ = '@ghazal.azadi@nmbu.no'
 
 
 def median(data):
