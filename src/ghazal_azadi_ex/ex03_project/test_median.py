@@ -22,7 +22,7 @@ def median(data):
 
 def test_single():
     """Test that the median function works for one element list"""
-    assert median([2]) == 2
+    assert median([1]) == 1
 
 
 def test_odd_length():

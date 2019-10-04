@@ -28,7 +28,7 @@ def test_empty():
 
 def test_single():
     """Test that the sorting function works for single-element list"""
-    assert bubble_sort([1]) == [1]
+    assert bubble_sort([2]) == [2]
 
 
 def test_sorted_is_not_original():
