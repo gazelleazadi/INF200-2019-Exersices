@@ -41,8 +41,37 @@ def test_reversed():
     assert median(reversed_list) == 4
 
 
+def test_ordered():
+    """Test that the median function works for ordered lists"""
+    ordered_list = sorted([4, 1, 3, 7, 5])
+    assert median(ordered_list) == 4
+
+
+def test_unordered():
+    """Test that the median function works for unordered lists"""
+    unordered_list = [4, 1, 3, 7, 5]
+    assert median(unordered_list) == 4
+
+
 def test_median_raises_value_error_on_empty_list():
-    """Test that the median function returns ValueError exception for emmty
+    """Test that the median function returns ValueError exception for empty
     list input"""
+    # The median function fails for this test.
+    # So the function would be edited.
     with pytest.raises(ValueError):
         median([])
+
+
+def test_original_unchanged():
+    """Test that ensures the median function leaves the original data
+     unchanged."""
+    data = [3, 7, 11, 4, 9, 10]
+    median(data)
+    assert data == [3, 7, 11, 4, 9, 10]
+
+
+def test_tuples():
+    """Test that ensures that the median function works for tuples as well
+     as lists"""
+    tuple_data = (3, 5, 9, 12, 8)
+    assert median(tuple_data) == 8
