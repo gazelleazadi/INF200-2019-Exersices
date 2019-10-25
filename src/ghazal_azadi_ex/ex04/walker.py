@@ -1,3 +1,6 @@
+__author__ = 'Ghazal_Azadi'
+__email__ = '@ghazal.azadi@nmbu.no'
+
 import random
 
 
