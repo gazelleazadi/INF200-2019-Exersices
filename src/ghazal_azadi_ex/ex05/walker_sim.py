@@ -6,11 +6,18 @@ import random
 
 class Walker:
 
-    def __init__(self, start, home):
-        self.start = start
+    def __init__(self, position, home):
+        self.position = position
         self.home = home
         self.steps = 0
-        self.position = start
+        # self.position = start
+
+    def get_position(self):
+
+        return self.position
+
+    def get_steps(self):
+        return self.steps
 
     def is_at_home(self):
 
@@ -26,12 +33,8 @@ class Walker:
 
             self.steps += 1
 
-    def get_position(self):
 
-        return self.position
 
-    def get_steps(self):
-        return self.steps
 
 
 class Simulation:
