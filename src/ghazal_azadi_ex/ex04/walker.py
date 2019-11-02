@@ -1,24 +1,21 @@
 __author__ = 'Ghazal_Azadi'
 __email__ = '@ghazal.azadi@nmbu.no'
 
+
 import random
 
 
 class Walker:
 
-    def __init__(self, position, home_position):
-        self.position = position
-        self.home_position = home_position
-        # self.state = True
+    def __init__(self, start, home):
+        self.start = start
+        self.home = home
         self.steps = 0
+        self.position = start
 
     def is_at_home(self):
 
-        # if self.position == self.home_position:
-        # self.state = True
-        # else:
-        # self.state = False
-        return self.position == self.home_position
+        return self.position == self.home
 
     def move(self):
         if not self.is_at_home():
