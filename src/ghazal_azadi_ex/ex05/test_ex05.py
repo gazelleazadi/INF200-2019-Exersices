@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Acceptance test suite for EX05.
 Your code should pass these tests before submission.
@@ -73,9 +75,9 @@ def test_bounded_walker():
     start, home, left, right = 10, 20, 0, 30
     w = BoundedWalker(start, home, left, right)
     assert not w.is_at_home()
-    w.move
+    w.move()
     assert w.get_position() != start
-    w.move
+    w.move()
     assert w.get_steps() == 2
 
 
