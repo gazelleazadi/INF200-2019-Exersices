@@ -1,4 +1,5 @@
 from random import seed
+import math
 
 __author__ = 'Ghazal_Azadi'
 __email__ = '@ghazal.azadi@nmbu.no'
@@ -20,10 +21,8 @@ class LCGRand:
     def random_sequence(self, length):
         return RandIter(self, length)
 
-
-def random_number_generator():
-    random_number = LCGRand(seed)
-    return random_number
+    def infinite_random_sequence(self):
+        return RandIter(self, length=math.inf)
 
 
 class RandIter:
