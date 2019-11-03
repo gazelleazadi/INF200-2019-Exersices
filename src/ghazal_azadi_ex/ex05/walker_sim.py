@@ -10,7 +10,6 @@ class Walker:
         self.position = position
         self.home = home
         self.steps = 0
-        # self.position = start
 
     def get_position(self):
 
@@ -32,9 +31,6 @@ class Walker:
                 self.position += 1
 
             self.steps += 1
-
-
-
 
 
 class Simulation:

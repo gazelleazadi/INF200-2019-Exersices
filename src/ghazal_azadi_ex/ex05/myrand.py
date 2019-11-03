@@ -1,4 +1,3 @@
-from random import seed
 import math
 
 __author__ = 'Ghazal_Azadi'

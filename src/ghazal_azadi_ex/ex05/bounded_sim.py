@@ -43,13 +43,6 @@ class BoundedSimulation(Simulation):
         return walker.get_steps()
 
 
-    #def run_simulation(self, num_walks):
-        #list_of_walks = []
-        #for walks in range(num_walks):
-            #list_of_walks.append(self.single_walk())
-        #return list_of_walks
-
-
 if __name__ == "__main__":
     for left_limit in (0, -10, -100, -1000, -10000):
         bounded_simulation = []
