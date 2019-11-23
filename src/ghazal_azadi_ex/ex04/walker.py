@@ -1,11 +1,11 @@
 __author__ = 'Ghazal_Azadi'
 __email__ = '@ghazal.azadi@nmbu.no'
 
-
 import random
 
 
 class Walker:
+
 
     def __init__(self, start, home):
         self.start = start
@@ -16,6 +16,21 @@ class Walker:
     def is_at_home(self):
 
         return self.position == self.home
+      
+    def __init__(self, position, home_position):
+        self.position = position
+        self.home_position = home_position
+        self.state = True
+        self.steps = 0
+
+    def is_at_home(self):
+
+        if self.position == self.home_position:
+            self.state = True
+        else:
+            self.state = False
+
+        return self.state
 
     def move(self):
         if not self.is_at_home():
@@ -35,6 +50,7 @@ class Walker:
         return self.steps
 
 
+
 # Defining walking process function
 def walking_process(start, home):
     w = Walker(start, home)
@@ -50,3 +66,17 @@ def walking_process(start, home):
 # walk = Walker(0, distance)
 # path_lengths.append(walking_process())
 # print(f'Distance: {distance} -> Path Lengths: {path_lengths}')
+    def walking_process(self):
+        while not self.is_at_home():
+            Walker.move(self)
+        return Walker.get_steps(self)
+
+
+if __name__ == "__main__":
+    for distance in (1, 2, 5, 10, 20, 50, 100):
+        path_lengths = []
+        # five simulations
+        for i in range(5):
+            walk = Walker(0, distance)
+            path_lengths.append(walk.walking_process())
+        print(f'Distance: {distance} -> Path Lengths: {path_lengths}')
